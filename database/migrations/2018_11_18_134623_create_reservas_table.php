@@ -15,7 +15,15 @@ class CreateReservasTable extends Migration
     {
         Schema::create('reservas', function (Blueprint $table) {
             $table->increments('id');
+            $table->date('data_criacao_reserva');
+            $table->date('data_inicial');
+            $table->date('data_final');
+            $table->unsignedInteger('hospedagem_id');
+            $table->unsignedInteger('user_id');
             $table->timestamps();
+
+            $table->foreign('hospedagem_id')->references('id')->on('hospedagens');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
