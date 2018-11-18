@@ -1,0 +1,14 @@
+.navbar-header-primary{
+    margin-bottom: 0;
+    border: none;
+}
+
+.navbar-header-secondary{
+    background: #f4645f;
+    border-color: #c14945;
+
+}
+
+.nav-link{
+    color: #fff !important;
+}
